@@ -1,12 +1,12 @@
-
 import React from "react";
+import Form from './Form.jsx';
 
 class App extends React.Component {
   render() {
     return (
       <>
         <h1>
-          Hello Robert
+          <Form />
         </h1>
       </>
     );
