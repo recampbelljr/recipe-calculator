@@ -113,7 +113,5 @@ export const processRecipe = (recipe) => {
     }
   })
 
-  console.log(recipeObj);
-
   return recipeObj;
 }
