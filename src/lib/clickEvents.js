@@ -1,6 +1,6 @@
 import React, { useState, createContext, useContext } from 'react';
 import { processRecipe } from './dataProcessing.js';
-import { calculateSingleServing, calculateDesiredRecipe } from './mathlib.js';
+import { calculateSingleServing, calculateDesiredRecipe, calculateFraction } from './mathlib.js';
 
 
 export const getRecipe = () => {
@@ -30,6 +30,9 @@ export const getRecipe = () => {
 
     if (typeOfElement === 'object') {
       let measurment = (element.measurment === null) ? '' : element.measurment;
+
+      element.number = calculateFraction(element.number);
+
       recipeString += `${element.number} ${measurment} ${ingredient}`
 
       if (index !== objLastIndex) {
