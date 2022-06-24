@@ -10,12 +10,15 @@ let App = () => {
   return (
     <>
       <div className="container">
+        <div className="header">
+          <div className="title">Robert's Recipe Calculator</div>
+        </div>
         <Form />
         <div className="line3">
           <div className="newServingSizeText">Desired # of Servings: </div>
           <input className="newServingSize" id="newServingSize" type="number" />
           <div className="arrow">=></div>
-          <button className="button" type="submit" onClick={()=> {setRecipe(getRecipe())}}>Submit</button>
+          <div className="button"> <button type="submit" onClick={()=> {setRecipe(getRecipe())}}>Submit</button></div>
         </div>
         <NewRecipe />
       </div>
